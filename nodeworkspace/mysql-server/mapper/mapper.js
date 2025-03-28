@@ -14,6 +14,10 @@ const connectionPool = mariaDB.createPool({
   permitSetMultiParamEntries : true,
   insertIdAsNumber : true,
   bigIntAsNumber : true,
+  logger : {
+    query : (msg) => console.log(msg),
+    error : (err) => console.log(err)
+  }
 });
 
 // const query = ()=>{
@@ -25,7 +29,7 @@ const connectionPool = mariaDB.createPool({
 const query = (alias, values)=>{
   return new Promise((resolve, reject)=> {
     let executeSql = sqlList[alias]; //sqlList['selectAll']
-    console.log(`sql : ${executeSql}`);
+    // console.log(`sql : ${executeSql}`);
     connectionPool.query(executeSql, values, (err, result)=>{
       if(err){
         reject({err});
@@ -35,7 +39,7 @@ const query = (alias, values)=>{
     });
   })
   .catch(err => {
-    console.log(err);
+    // console.log(err);
     return err;
   });
 }
