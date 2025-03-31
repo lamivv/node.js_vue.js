@@ -25,7 +25,7 @@ const query = (alias, values) => {
     let executeSql = sqlList[alias];
     connectionPool.query(executeSql, values, (err, result)=>{
       if (err) {
-        reject({err});
+        reject({err});// {'err':{}}
       } else {
         resolve(result);
       }
