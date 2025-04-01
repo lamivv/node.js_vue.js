@@ -49,6 +49,15 @@
     },
   ];
 
+  // 자바스크립트
+  // <button onClick="selected();"> 이벤트객체 사용불가 
+  // 위의 방식은 buttonTag.onclick = function (event) {selected();} 이렇게 들어와서 사용 불가함
+  // buttonTag.onclick = function (event) {selected(event);} 이렇게 사용되어야 하기때문에 위의 방식은 사용불가함
+  // <button onClick="selected">
+  // 위의 방식은 buttonTag.onclick = selected; 와 같음. 사용가능
+  // let testFunc = selected(); 함수 호출 리턴값
+  // let testFunc = selected; 함수 복사
+  
 export default {
   data(){
     return{

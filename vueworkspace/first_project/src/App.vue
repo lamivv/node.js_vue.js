@@ -5,7 +5,9 @@
     <router-link to="/dataBinding">DataBind</router-link> |
     <!-- <router-link v-bind:to="{ name : 'listBinding'}">ListBind</router-link> -->
     <router-link :to="{ name : 'listBind'}">ListBind</router-link> |
-    <router-link to="/ifBinding">IfBind</router-link>
+    <router-link to="/ifBinding">IfBind</router-link> |
+    <router-link to="/onEvent">OnEvent</router-link> |
+    <router-link to="/computedWatch">ComWat</router-link>
   </nav>
   <router-view/>
   <!-- 자식 컴포넌트로 정의한 컴포넌트를 html 표시하기 (태그처럼 사용) -->
