@@ -4,17 +4,20 @@ Content-type
 - key=value&key=value&...
 - QueryString(질의문자열)
 - METHOD : 제한없음
+=>  URLSearchParams
 
 2) application/json
 - 객체 { "key" : "value", ...}
   or 배열 [ {}, {}]
 - JSON(Javascript Object Notation)
 - METHOD : POST, PUT
+=> js 클래스 : JSON
 
 3) multipart/form-data
 - 미디어파일 전체
 - METHOD : POST, PUT
 - 특징) 별도 인코딩 없음
+=> js 클래스 : FormData
 */
 
 /*
